@@ -34,7 +34,6 @@ public class MapPrinter {
     maps.put("key3", "value3");
     printMapOnConcole(maps);
     printMapOnConcole(maps, "\n", "\t");
-    printMapOnConcole(maps, "", "");
   }
 
 }
