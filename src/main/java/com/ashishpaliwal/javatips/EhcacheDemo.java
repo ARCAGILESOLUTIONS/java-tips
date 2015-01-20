@@ -41,7 +41,7 @@ public class EhcacheDemo {
     cacheManagerConfiguration.addCache(cacheConfiguration);
     CacheManager cacheManager = CacheManager.create(cacheManagerConfiguration);
 
-    Ehcache cache = cacheManager.addCacheIfAbsent("testCache");
+    Ehcache cache = cacheManager.getEhcache("testCache");
 
     Element cacheElement1 = new Element("Key-1", "Value-1");
     Element cacheElement2 = new Element("Key-2", "Value-2");
