@@ -34,8 +34,8 @@ public class S3Base {
   public void listBucketContent(String bucketName) {
     ObjectListing listing = s3.listObjects(new ListObjectsRequest().withBucketName(bucketName));
     for (S3ObjectSummary objectSummary : listing.getObjectSummaries()) {
-      System.out.println(" - " + objectSummary.getKey() + "  " +
-              "(size = " + objectSummary.getSize() + ")");
+      System.out.println(" -> " + objectSummary.getKey() + "  " +
+              "(size = " + objectSummary.getSize()/1024 + " KB)");
     }
   }
 
