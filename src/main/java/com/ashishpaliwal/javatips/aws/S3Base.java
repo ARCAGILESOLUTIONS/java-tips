@@ -26,7 +26,7 @@ public class S3Base {
     // List all the buckets
     List<Bucket> buckets = s3.listBuckets();
     for (Bucket next : buckets) {
-      System.out.println(next.getName());
+      //System.out.println(next.getName());
       listBucketContent(next.getName());
     }
   }
@@ -36,6 +36,7 @@ public class S3Base {
     for (S3ObjectSummary objectSummary : listing.getObjectSummaries()) {
       System.out.println(" -> " + objectSummary.getKey() + "  " +
               "(size = " + objectSummary.getSize()/1024 + " KB)");
+      System.out.println(objectSummary.getBucketName());
     }
   }
 
